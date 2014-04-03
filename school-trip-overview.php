@@ -10,11 +10,7 @@
 		<?php endif; ?>            
 		<!-- <?php the_content( __( 'more &rarr;', 'ilisa' ) ); ?> -->
 
-		<div class="post-thumbnail-date">
-			<?php display_trip_date(); ?>
-		</div><!-- END .post-thumbnail-date -->
-
-		<div class="post-thumbnail-price rotated">
+		<div class="post-thumbnail-price">
                         <?php display_trip_price(); ?>
 		</div><!-- END .post-thumbnail-price -->
 	</div><!-- END .post-thumbnail-content -->

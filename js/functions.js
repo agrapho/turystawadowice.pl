@@ -20,4 +20,11 @@
     }
   }).scroll();
 
+  $(".anchor-link").click(function() {
+    $('html, body').animate({
+        scrollTop: $( $(this).find("a").attr('href') ).offset().top - 30
+    }, 500);
+    return false;
+  });
+
 }(jQuery);

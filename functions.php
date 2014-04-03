@@ -1,6 +1,25 @@
 <?php
 
-$abc = 12;
+// Theme-Setup
+add_action( 'after_setup_theme', 'ilisa_theme_setup' );
+
+function ilisa_theme_setup() {
+
+// This theme supports post thumbnails
+        add_theme_support( 'post-thumbnails' );
+
+// This theme supports custom background (with backwards compatibility)
+        $args = array(
+                'default-color' => 'FFFFFF',
+        );
+
+        $args = apply_filters( 'ilisa_custom_background_args', $args );
+
+        if ( function_exists( 'wp_get_theme' ) ) {
+                add_theme_support( 'custom-background', $args );
+        }
+}
+
 
 function filter_wp_title( $title ) {
 	// Get the Site Name
