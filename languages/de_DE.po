@@ -1,0 +1,344 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Ilisa v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-01-24 13:37:05+0000\n"
+"Last-Translator: admin <marion.lindert@gmx.net>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: 404.php:6
+#@ ilisa
+msgid "Page not found"
+msgstr "Seite nicht gefunden"
+
+#: 404.php:9
+#@ ilisa
+msgid "Apologies, but the page you requested could not be found. Perhaps searching will help."
+msgstr "Die Seite die Sie gesucht haben existiert nicht. Möglicherweise kann Ihnen die Suche helfen, die gewünschten Informationen zu finden."
+
+#: archive.php:15
+#, php-format
+#@ ilisa
+msgid "Daily Archives: %s"
+msgstr "Archiv nach Tagen: %s"
+
+#: archive.php:17
+#, php-format
+#@ ilisa
+msgid "Monthly Archives: %s"
+msgstr "Archiv nach Monat: %s"
+
+#: archive.php:19
+#, php-format
+#@ ilisa
+msgid "Yearly Archives: %s"
+msgstr "Archiv nach Jahr: %s"
+
+#: archive.php:21
+#@ ilisa
+msgid "Archives"
+msgstr "Archiv"
+
+#: archive.php:32
+#: search.php:23
+#@ ilisa
+msgid "Nothing Found"
+msgstr "Nichts gefunden"
+
+#: archive.php:35
+#@ ilisa
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Der gesuchte Inhalt konnte nicht gefunden werden. Möglicherweise hilft die Suchfunktion weiter."
+
+#: archive.php:43
+#: category.php:16
+#: index.php:11
+#: search.php:16
+#: single.php:20
+#: tag.php:18
+#@ ilisa
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Ältere Postings"
+
+#: archive.php:44
+#: category.php:17
+#: index.php:12
+#: search.php:17
+#: single.php:21
+#: tag.php:19
+#@ ilisa
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "<span class=\"meta-nav\">&larr;</span> Neuere Postings"
+
+#: category.php:6
+#, php-format
+#@ ilisa
+msgid "Category Archives: %s"
+msgstr "Archiv nach Kategorie: %s"
+
+#: comments.php:18
+#, php-format
+#@ ilisa
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Ein Kommentar zu &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s Kommentare zu &ldquo;%2$s&rdquo;"
+
+#: comments.php:26
+#: comments.php:40
+#@ ilisa
+msgid "&larr; Older Comments"
+msgstr "&larr; Ältere Kommentare"
+
+#: comments.php:27
+#: comments.php:41
+#@ ilisa
+msgid "Newer Comments &rarr;"
+msgstr "Neuere Kommentare &rarr;"
+
+#: comments.php:51
+#@ ilisa
+msgid "Comments are closed."
+msgstr "Kommentare sind geschlossen."
+
+#: content.php:6
+#@ ilisa
+msgid "by"
+msgstr "von"
+
+#: content.php:6
+#@ ilisa
+msgid "on"
+msgstr "am"
+
+#: content.php:18
+#: image.php:68
+#@ ilisa
+msgid "Pages:"
+msgstr "Seiten:"
+
+#: content.php:28
+#: image.php:75
+#, php-format
+#@ ilisa
+msgid "Categories: %2$s"
+msgstr "Kategorien: %2$s"
+
+#: content.php:32
+#: image.php:79
+#, php-format
+#@ ilisa
+msgid "Tags: %2$s"
+msgstr "Schlagworte: %2$s"
+
+#: content.php:34
+#@ ilisa
+msgid "Permalink "
+msgstr "Permalink"
+
+#: content.php:36
+#@ ilisa
+msgid "Edit &rarr;"
+msgstr "Editieren &rarr;"
+
+#: footer.php:6
+#, php-format
+#@ ilisa
+msgid "Theme: %1$s by %2$s"
+msgstr "Theme: %1$s von %2$s"
+
+#: footer.php:7
+#@ ilisa
+msgid "Top"
+msgstr "Top"
+
+#: functions.php:21
+#@ ilisa
+msgid "Primary Navigation"
+msgstr "Hauptnavigation"
+
+#: functions.php:91
+#@ ilisa
+msgid "Sidebar"
+msgstr "Seitenleiste"
+
+#: functions.php:93
+#@ ilisa
+msgid "The widget area on the sidebar"
+msgstr "Der Widgetbereich in der Seitenleiste"
+
+#: functions.php:153
+#, php-format
+#@ ilisa
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">meint:</span>"
+
+#: functions.php:167
+#@ ilisa
+msgid "Your comment is awaiting moderation."
+msgstr "Dein Kommentar wartet auf Freischaltung."
+
+#. translators: 1: date, 2: time
+#: functions.php:158
+#, php-format
+#@ ilisa
+msgid "%1$s at %2$s"
+msgstr "%1$s am %2$s"
+
+#: functions.php:142
+#: functions.php:160
+#@ ilisa
+msgid "(Edit)"
+msgstr "(Editieren)"
+
+#: functions.php:142
+#@ ilisa
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: includes/theme-options.php:88
+#, php-format
+#@ ilisa
+msgid "%s Options"
+msgstr "%s Optionen"
+
+#: includes/theme-options.php:98
+#@ ilisa
+msgid "Custom Color"
+msgstr "Benutzerdefinierte Farbe"
+
+#: includes/theme-options.php:102
+#@ ilisa
+msgid "Select a Color"
+msgstr "Eine Farbe auswählen"
+
+#: includes/theme-options.php:105
+#@ ilisa
+msgid "Changes the color of the blog title, the links, the widgets hover, the buttons, the meta-data, the menus hover and the background-color of the colored pages."
+msgstr "Ändert die Farbe des Blogtitels, der Links, der Mouseovers der Widgets, der Buttons, der Meta-Daten und der Mouseovers der Menüs."
+
+#: includes/theme-options.php:106
+#, php-format
+#@ ilisa
+msgid "Default color: %s; Direct Code Input as HEX code or use Color Picker"
+msgstr "Standardfarbe: %s; Manuelle Eingabe als HEX Code oder Verwendung des Farbwählers."
+
+#: includes/theme-options.php:108
+#@ ilisa
+msgid "Custom Favicon"
+msgstr "Benutzerdefiniertes Favicon"
+
+#: includes/theme-options.php:110
+#@ ilisa
+msgid "Upload your .ico Favicon image (via FTP) to your server and enter the Favicon URL here."
+msgstr "Lade das .ico Favicon Bild mittels FTP auf den Server und gib hier die Favicon URL ein."
+
+#: search.php:7
+#, php-format
+#@ ilisa
+msgid "Search Results for: %s"
+msgstr "Suchergebnisse für: %s"
+
+#: search.php:26
+#@ ilisa
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Entschuldigung, es konnten keine passenden Ergebnisse gefunden werden. Bitte versuchen Sie es mit anderen Suchbegriffen noch einmal."
+
+#: tag.php:7
+#, php-format
+#@ ilisa
+msgid "Tag Archives: %s"
+msgstr "Schlagwort Archiv: %s"
+
+#: footer.php:6
+#@ ilisa
+msgid "&copy; by"
+msgstr "&copy; by"
+
+#: footer.php:6
+#@ ilisa
+msgid "proudly powered by <a href=\"http://wordpress.org/\">WordPress</a>"
+msgstr "proudly powered by <a href=\"http://wordpress.org/\">WordPress</a>"
+
+#: comments.php:25
+#: comments.php:39
+#@ ilisa
+msgid "Comment navigation"
+msgstr "Kommentar Navigation"
+
+#: content.php:17
+#: image.php:67
+#@ ilisa
+msgid "more &rarr;"
+msgstr "mehr &rarr;"
+
+#: image.php:10
+#, php-format
+#@ ilisa
+msgid "<p>Published on %1$s at <a href=\"%2$s\" title=\"Link to full-size image\">%3$s &times; %4$s</a> in <a href=\"%5$s\" title=\"Return to %6$s\" rel=\"gallery\">%6$s</a></p>"
+msgstr "<p>Veröffentlicht am %1$s in <a href=\"%2$s\" title=\"Link to full-size image\">%3$s &times; %4$s</a> in <a href=\"%5$s\" title=\"Zurück zu %6$s\" rel=\"gallery\">%6$s</a></p>"
+
+#: image.php:20
+#@ ilisa
+msgid "Next &rarr;"
+msgstr "Nächstes &rarr;"
+
+#: image.php:21
+#@ ilisa
+msgid "&larr; Previous"
+msgstr "&larr; Voriges"
+
+#: image.php:94
+#@ ilisa
+msgid "&larr; Older posts"
+msgstr "&larr; Ältere Postings"
+
+#: image.php:95
+#@ ilisa
+msgid "Newer posts &rarr;"
+msgstr "Neuer Postings &rarr;"
+
+#: includes/theme-options.php:55
+#: includes/theme-options.php:56
+#@ ilisa
+msgid "ilisa Options"
+msgstr "ilisa Optionen"
+
+#: searchform.php:3
+#@ ilisa
+msgid "Search &hellip;"
+msgstr "Suchen &hellip;"
+
+#: searchform.php:4
+#@ ilisa
+msgid "Search"
+msgstr "Suchen"
+
+#: content.php:6
+#@ ilisa
+msgid "no comments"
+msgstr "keine Kommentare"
+
+#: content.php:6
+#@ ilisa
+msgid "one comment"
+msgstr "ein Kommentar"
+
+#: content.php:6
+#@ ilisa
+msgid "% comments"
+msgstr "% Kommentare"
+

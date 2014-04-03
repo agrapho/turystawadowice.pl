@@ -1,0 +1,533 @@
+/*
+Theme Name: Ilisa
+Theme URI: http://ilisa.pixxels.at
+Author: Marion Lindert
+Author URI: http://www.pixxels.at
+Description: ilisa is a clean and minimal WordPress Theme that can be easily used as a personal portfolio or a business website. A responsive layout optimizes the theme for mobile devices. To customize the theme you can choose your own link-color, logo and favicon.
+Version: 1.1.1
+
+Ilisa WordPress Theme, Copyright 2013, Marion Lindert
+License: GNU General Public License
+License URI: license.txt
+
+Tags: light, custom-colors, custom-background, two-columns, right-sidebar, threaded-comments, custom-menu, sticky-post, full-width-template, custom-header, featured-images, theme-options, translation-ready, editor-style
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+/* Google-Fonts */
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One); /*h*/
+
+
+/* =Reset
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 14px;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+html {
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+body {
+	background: #fff;
+}
+
+ol, ul {
+	list-style: none;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a:focus {
+	outline: thin dotted;
+}
+a:hover,
+a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+	outline: 0;
+}
+a img {
+	border: 0;
+}
+
+/** -- GENERAL STRUCTURE -- **/
+
+#page {
+}
+
+#branding .background-gradient {
+	background-image: url("images/gradient.png");
+	background-size: 100%;
+}
+
+#branding .background-image {
+	position: absolute;
+	top: -70px;
+	right: 0;
+	height: 278px;
+	width: 450px;
+	//background-image: url("images/autobus.jpg");
+background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 59%, rgba(0,0,0,0.65) 100%), url('images/autobus.jpg') no-repeat;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(59%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))), url('images/autobus.jpg') no-repeat;
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 59%,rgba(0,0,0,0.65) 100%), url('images/autobus.jpg') no-repeat;
+background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 59%,rgba(0,0,0,0.65) 100%), url('images/autobus.jpg') no-repeat;
+background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 59%,rgba(0,0,0,0.65) 100%), url('images/autobus.jpg') no-repeat;
+background: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 59%,rgba(255,255,255,1.0) 100%),linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 59%,rgba(255,255,255,1.0) 100%), url('images/autobus.jpg') no-repeat;
+	background-size: 100%;
+}
+
+#main {
+	margin: 0 auto;
+	margin-left:1em;
+	margin-right:1em;
+}
+
+#background {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: -1;
+}
+
+#background img {
+	width: 100%;
+	height: auto;
+	opacity: 0.15;
+	filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+    	filter: gray; /* IE6-9 */
+    	-webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+}
+
+#main-frame {
+	position: relative;
+}
+
+#content-wrapper {
+	padding-top:2em;
+	overflow: hidden;
+}
+#main-content {
+	width: 75%;
+	float: left;
+	margin-right: 2em;
+}
+#sidebar {
+	width: 20.0%;
+	float: right;
+	overflow:hidden;
+}
+
+.with-margin {
+	max-width:1160px;
+	margin: 0 auto;
+}
+
+/** -- STYLES -- **/
+h1,h2,h3,h4,h5,h6 {
+	clear: both;
+	font-family: 'Fjalla One', sans-serif;
+	text-transform:uppercase;
+}
+
+h1, h1 a, h2, h2 a {
+	color: #000075;
+	font-size: 28px;
+	text-decoration: none;
+}
+
+h1 a:hover,
+h2 a:hover {
+	color: #ff8500;
+}
+
+h1 { font-size:28px; font-size:2.8rem; }
+h2 { font-size:22px; font-size:2.2rem; }
+h3 { font-size:18px; font-size:1.8rem; }
+h4 { font-size:16px; font-size:1.6rem; }
+h5 { font-size:14px; font-size:1.4rem; }
+h6 { font-size:13px; font-size:1.3rem; }
+#content-wrapper h1 { padding: 1em 0 0.6em; }
+#content-wrapper h2 { padding: 1em 0 0.6em; }
+#content-wrapper h3 { padding: 1em 0 0.3em; }
+#content-wrapper h4 { padding: 1em 0 0.3em; }
+#content-wrapper h5 { padding: 1em 0 0.2em; }
+#content-wrapper h6 {padding: 0.9em 0 0.1em; }
+
+blockquote { margin: 0.7em 1.5em; padding: 1.5em 0.8em 0.2em; border-left: 0.5em solid #73b1d2;	background-color: #EEE; }
+
+.aligncenter, div.aligncenter {	margin-left: auto; margin-right: auto; display: block; }
+.alignleft { float: left; }
+.alignright { float: right; }
+
+#main-content address { padding: 0 0 2em 0; font-style: italic; }
+#main-content abbr, acronym { border-bottom: .1em dotted; }
+#main-content pre, code, tt, kbd { font-size: 1.1em; }
+
+img { max-width: 100%; height: auto; }
+img.attachment-thumbnail, img.wp-post-image, img.attachment-medium, img.attachment-large, img.attachment-full{ float: left;	margin-right:1em !important; margin-bottom:0.5em!important; }
+
+#feature-trips {
+}
+
+#featured-box-offers {
+	padding-top:1em;
+	clear:both;
+}
+
+.ep3promobox {
+	padding-right: 3em;
+	padding-bottom: 2em;
+}
+
+.with-shadow, .ep3boxvertical, .quicksearchtable {
+	-moz-box-shadow: 5px 5px 5px #888;
+	-webkit-box-shadow: 5px 5px 5px #888;
+	box-shadow: 5px 5px 5px #888;
+}
+
+.quicksearchtable > tbody > tr:first-child {
+	display: none;
+}
+
+#partnership-programme {
+	padding-top: 2em;
+}
+
+.post-thumbnail-date {
+	color: #ff8500;
+	font-size: 1.3em;
+	font-style: italic;
+	text-align: center;
+	position: relative;
+	top: -7px;
+	text-shadow: 1px 1px #0c2a57;
+}
+
+.post-thumbnail-text {
+	display:none;
+	color: #ff8500;
+	font-size: 1.3em;
+	text-align: center;
+	position: relative;
+	top: -7px;
+	text-shadow: 1px 1px #0c2a57;
+}
+
+.post-thumbnail-price {
+	float: right;
+	color: #ff8500;
+	font-weight: bold;
+	font-size: 2.5em;
+	text-shadow: 2px 2px #0c2a57;
+	position: relative;
+	top: -10px;
+	
+	-webkit-transform: rotate(-25deg);	/* Safari */
+	-moz-transform: rotate(-25deg);	/* Firefox */
+	-ms-transform: rotate(-25deg);	/* IE */
+	-o-transform: rotate(-25deg);	/* Opera */
+}
+
+#contact-map {
+	float: left;
+	width: 60%;
+}
+
+#contact-map iframe {
+	border: solid 1px #BBB;
+}
+
+#contact-information {
+	float: right;
+	width: 40%;
+}
+
+#contact-information h3 { padding: 0 0 0.6em; }
+
+/** -- Navigations -- **/
+
+#branding img {
+	height: 235px;
+	margin: 20px 0;
+	z-index: 9999;
+}
+
+#branding #main-menu {
+	display: block;
+	clear:both;
+	word-wrap: break-word;
+	background: #ff8500;
+	width:100%;
+}
+
+.fixed-main-menu {
+	position: fixed;
+	top: 0px;
+	z-index: 9999;
+}
+
+#branding #main-menu ul {
+	list-style: none;
+	margin: 0;
+}
+#branding #main-menu li {
+	float: left;
+	position: relative;
+}
+#branding #main-menu ul li a {
+	position: relative;
+	left: -18px;
+	display: block;
+	padding: 6px 18px;
+	font-family: 'Calibri';
+	text-transform:uppercase;
+	text-decoration: none;
+	font-size:18px;
+	font-size:1.8rem;
+	font-weight: bold;
+	background-image: -webkit-linear-gradient(#999999, #000075);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: #000075;
+    	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.33);
+}
+
+#branding #main-menu ul li a:hover {
+	color:#ff8500!important;
+	text-decoration: none;
+	-webkit-background-clip: initial;
+	-webkit-text-fill-color: initial;
+}
+
+#branding #main-menu ul ul {
+	display: none;
+	float: left;
+	position: absolute;
+	z-index: 500;
+}
+
+#branding #main-menu ul ul li a,
+#branding #main-menu ul ul ul li a {
+	font-size: 1.1em;
+	color: #ff8500;
+	width: 9em;
+	height: auto;
+	text-transform: uppercase;
+	border: none;
+	background: #000075;
+	-webkit-text-fill-color: initial;
+}
+
+#branding #main-menu ul ul li a:hover,
+#branding #main-menu ul ul ul li a:hover {
+}
+
+#branding #main-menu ul li:hover > ul {
+	display: block;
+}
+
+#branding #header-contact {
+	width: 20%;
+	float: right;
+	padding-top: 1em;
+}
+
+#branding #header-contact ul li {
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #000075;
+}
+
+/** -- Lists -- **/
+
+ol, ul { list-style: none outside none; }
+
+#main-content ul, #main-content ol {  }
+#main-content ul { list-style: disc; }
+#main-content ol { list-style: decimal; }
+#main-content ul ul,#main-content ol ol,#main-content ul ol,#main-content ol ul { margin-bottom: 0;	margin-left: 1.5em; }
+
+#main-content .post ul, #main-content .page ul, #comments .comment-content ul  {
+	padding:0.5em 0 0.5em 2em;
+	line-height: 2em;
+}
+#main-content .post ul li, #main-content .page ul li, #comments .comment-content ul li { padding:0; list-style: none; }
+#main-content .post ol, #main-content .page ol, #comments .comment-content ol { padding:0.5em 0 0.5em 2em ; line-height: 1.3; }
+#main-content .post ol li, #main-content .page ol li, #comments .comment-content ol li { padding:0; list-style: decimal!important; }
+#main-content .post ol ol li, #main-content .page ol ol li,  #comments .comment-content ol ol li {	list-style: lower-latin!important; }
+#main-content .post ol ol ol li, #main-content .page ol ol ol li, #comments .comment-content ol ol ol li {	list-style: decimal!important; }
+
+dl { margin:0; padding: 0; }
+dt{ font-weight: bold; margin: 0; padding-top: 1em; }
+dd { margin: 0; padding-bottom: 1em; padding-left: 2em; }
+
+/** -- POSTS -- **/
+.post-thumbnail-content {
+	float: left;
+	overflow: hidden;
+	width: 230px;
+	padding-right: 3em;
+	padding-bottom: 2em;
+}
+
+.post-thumbnail-content img {
+	width:100%;
+	height: 160px;
+	margin: 0;
+	padding: 0;
+}
+
+.trip-gallery {
+	float: left;
+	margin-right: 2em;
+	margin-bottom: 2em;
+}
+
+.trip-overview {
+}
+
+.trip-description {
+	clear: both;
+}
+
+.post-content {
+}
+
+.entry-meta {
+	clear: both;
+	font-style:italic;
+	color:#CCCCCC;
+	font-size:11px;
+	font-size:1.1rem;
+}
+
+#main-content .sticky {}
+
+
+
+/** -- CLEARING FLOATS -- **/
+.clear { clear:both; display:block;	overflow:hidden; visibility:hidden;	width:0; height:0; }
+.clearfix:after { clear:both; content:' '; display:block; visibility:hidden; width:0; height:0; }  
+
+
+/* Text elements */
+p {
+	margin-bottom: 1.5em;
+	line-height: 1.5em;
+}
+b, strong {	font-weight: bold; }
+dfn, cite, em, i { font-style: italic; }
+address { margin: 0 0 1.5em; }
+pre { background: #eee;	font-family: "Courier 10 Pitch", Courier, monospace; font-size: 15px; font-size: 1.5rem; line-height: 1.6; margin-bottom: 1.6em; padding: 1.6em; overflow: auto; max-width: 100%; }
+code, kbd, tt, var { font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace; }
+abbr, acronym { border-bottom: 1px dotted #666;	cursor: help; }
+mark, ins {	background: #fff9c0; text-decoration: none; }
+sup, sub { font-size: 75%; height: 0; line-height: 0; position: relative; vertical-align: baseline; }
+sup { bottom: 1ex; }
+sub { top: .5ex; }
+small {	font-size: 75%; }
+big { font-size: 140%; }
+large { font-size: 200%; }
+figure { margin: 0; }
+
+
+/** -- TRIP -- **/
+.trip-overview {
+	min-width:150px;
+	font-size: 2em;
+}
+
+.trip-overview ul li {
+	list-style: none;
+}
+
+.trip-details {
+	width: 100%;
+	clear:both;
+	line-height: 2em;
+	text-align: justify;
+}
+
+
+/** -- CSS3 MEDIA QUERIES FOR RESPONSIVE DESIGN -- **/
+
+
+@media screen and (max-width : 800px) {
+#main {	margin: 0;}
+#branding {	margin: 0;}
+#header { padding:0;}
+#page {	max-width: 100%; margin: 0 auto; padding: 0 2em; }
+#main-content {
+	width: 100%;
+}
+
+#sidebar {
+	width: 100%;
+	float:left;
+	margin-left:0;
+	margin-top:3em;
+}
+
+#main-content #nav-below {border-top:1px dotted #8E8E8E; padding-top:1em;}
+
+@media screen and (max-width : 480px) {
+#branding {	border:none;}
+#branding #main-menu {
+	float:none;
+	margin:0;
+	padding:0;
+	background-color:#DDD;
+}
+
+#branding #main-menu ul {
+	margin: 0;
+	padding:0;
+}
+#branding #main-menu ul li, #branding #main-menu ul li ul li  {list-style-type:none; padding:0; margin:0; display:inline; float:none;}
+#branding #main-menu ul ul, #branding #main-menu ul ul ul {display:inline; float:none; margin:0; position:relative; top:0; padding:0; left:1em;  }	
+#branding #main-menu ul ul {left:0em;}
+#branding #main-menu ul li a {color:#FFF;background-color:#333;float:none; margin:0; margin-bottom:0.2em; margin-top:0.5em;;}
+#branding #main-menu ul li a:hover {color:#FFF;	background-color:#999!important;text-decoration: none;}
+#branding #main-menu ul ul li a, #branding #main-menu ul ul ul li a {color:#000; background-color:#DDD!important; padding:0; margin:0; margin-left:1em; line-height:1.5;  }
+#branding #main-menu ul ul li a:hover, #branding #main-menu ul ul ul li a:hover  {color:#73b1d2!important; background-color:#DDD!important;text-decoration:underline; }
+#branding #main-menu ul li:hover > ul {display: inline;}
+#blog-title {padding: 1em 0 0.5em;}
+#site-title {font-size:2.5em; margin: 0.5em 0.5em 0 0; line-height:1;}
+#site-description {font-size:0.8em; }
+#wrapper {margin:0.5em 0 0;	padding: 0; }
+}
