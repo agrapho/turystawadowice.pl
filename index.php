@@ -20,9 +20,7 @@
 
 	<div id="main-content">
 	    <?php if($ep3gate->getStep() >1 ) { ?>
-		<header>
-		    <h1>Kryteria wyszukiwania</h1>
-		</header>
+		<h2>Kryteria wyszukiwania</h2>
 	        <div id="ep3-content">
 		    <div class="color1bg">
         		<?php echo $ep3gate->getPart('menu') ?>

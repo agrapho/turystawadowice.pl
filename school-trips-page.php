@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: School Trips
+Template Name: Wycieczki Szkolne
 */
 ?>
 <?php get_header(); ?>

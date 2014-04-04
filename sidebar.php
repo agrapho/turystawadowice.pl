@@ -1,7 +1,5 @@
   <div id="sidebar" role="complementary">
-    <header>
-      <h1>Szukaj</h1>
-    </header>
+    <h2>Szukaj</h2>
       
 <?php 
  $ep3gate=new ep3gate(
