@@ -3,7 +3,7 @@
 	<h1>
 		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a>
 	</h1>
-        
+
 	<div class="entry-content">
 		<div class="trip-gallery with-shadow">
 			<?php echo do_shortcode('[slideshow post_id="' . get_the_ID() . '"]'); ?>

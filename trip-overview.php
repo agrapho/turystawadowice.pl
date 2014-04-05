@@ -15,7 +15,7 @@
 		</div><!-- END .post-thumbnail-date -->
 
 		<div class="post-thumbnail-price rotated">
-                        <?php display_trip_price(); ?>
+                        <?php display_trip_price(true); ?>
 		</div><!-- END .post-thumbnail-price -->
 	</div><!-- END .post-thumbnail-content -->
 </div>

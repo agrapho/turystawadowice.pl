@@ -184,7 +184,9 @@ h5, h5 a { font-size:14px; }
 h6, h6 a { font-size:13px; }
 #content-wrapper h1 { padding: 1em 0 0.6em; }
 #content-wrapper h2 { padding: 1em 0 0.6em; }
-#content-wrapper h3 { padding: 1em 0 0.3em; }
+#content-wrapper h3 {
+	padding: 1em 0 0.3em;
+}
 #content-wrapper h4 { padding: 1em 0 0.3em; }
 #content-wrapper h5 { padding: 1em 0 0.2em; }
 #content-wrapper h6 {padding: 0.9em 0 0.1em; }
@@ -229,6 +231,16 @@ img.attachment-thumbnail, img.wp-post-image, img.attachment-medium, img.attachme
 	padding-top: 2em;
 }
 
+.post-thumbnail-header {
+	height: 6em;
+	position: relative;
+}
+
+.post-thumbnail-header h3 {
+	position: absolute;
+	bottom: 0px;
+}
+
 .post-thumbnail-date {
 	color: #ff8500;
 	font-size: 1.3em;
@@ -256,7 +268,7 @@ img.attachment-thumbnail, img.wp-post-image, img.attachment-medium, img.attachme
 	font-size: 1.5em;
 	text-shadow: 1px 1px #0c2a57;
 	position: relative;
-	top: -5px;
+	top: 0px;
 }
 	
 .rotated {

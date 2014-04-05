@@ -22,7 +22,9 @@ Template Name: Wycieczki Szkolne
 			  $featured_category = get_category_by_slug($featured_category_name);
 			  echo '<h2 id="' . $featured_category->cat_name . '">' . $featured_category->cat_name . '</h2>';
                           $args = array( 'posts_per_page' => -1,
-                                         'category' => $featured_category->term_id );
+                                         'category' => $featured_category->term_id,
+					 'orderby' => title,
+					 'order' => 'ASC' );
                           $posts = get_posts( $args );
                           foreach ( $posts as $post ) {
 			       if ( has_category($school_trips_category, $post) )
