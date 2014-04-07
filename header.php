@@ -26,19 +26,21 @@
 <div id="page" class="clearfix">
 	
 	<header id="branding">
-            <div class="background-image">
-            </div>
+            <div class="background-image"></div>
+
             <div class="background-gradient">
               <hgroup id="blog-title" class="with-margin">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 		<img src="<?php echo get_stylesheet_directory_uri()."/images/logo.png"; ?>" alt="" /></a>
-		<div id="header-contact">
+		<div id="header-contact-wrapper">
+                    <div id="header-contact">
 			<ul>
 				<li>tel./fax 33 82 346 43</li>
 				<li>tel. 33 87 205 13</li>
 				<li>tel. 504 903 357</li>
 				<li>tel. 660 089 661</li>
 			</ul>
+                    </div>
 		</div>
 	      </hgroup>
             </div>
