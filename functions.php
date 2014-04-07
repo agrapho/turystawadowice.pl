@@ -109,3 +109,8 @@ function trip_boarding() {
 	$boarding = get_post_meta(get_the_ID(),'wpcf-trip-boarding',TRUE);
 	return $boarding;
 }
+
+function company_website() {
+	$website = get_post_meta(get_the_ID(),'wpcf-company-website',TRUE);
+	return $website;
+}

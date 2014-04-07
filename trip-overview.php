@@ -8,7 +8,6 @@
                             <?php the_post_thumbnail('thumbnail', array('class' => 'with-shadow')); ?>
                         </a>
 		<?php endif; ?>            
-		<!-- <?php the_content( __( 'more &rarr;', 'ilisa' ) ); ?> -->
 
 		<div class="post-thumbnail-date">
 			<?php display_trip_date(); ?>
