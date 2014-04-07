@@ -31,7 +31,8 @@
             
 		<div id="featured-trips">
                         <?php $featured_category = get_category_by_slug('polecane');
-                              $args = array( 'posts_per_page' => -1,
+                              $args = array( 'post_type' => 'wycieczka',
+                                             'posts_per_page' => -1,
                                              'category' => $featured_category->term_id );
                               $posts = get_posts( $args );
                               foreach ( $posts as $post ) {

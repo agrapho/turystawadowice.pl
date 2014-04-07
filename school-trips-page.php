@@ -20,7 +20,8 @@ Template Name: Wycieczki Szkolne
 
 		      foreach ( $featured_categories as $featured_category) {
 			  echo '<h2 id="' . $featured_category->cat_name . '">' . $featured_category->cat_name . '</h2>';
-                          $args = array( 'posts_per_page' => -1,
+                          $args = array( 'post_type' => 'wycieczka',
+                                         'posts_per_page' => -1,
                                          'category' => $featured_category->term_id,
 					 'orderby' => title,
 					 'order' => 'ASC' );
