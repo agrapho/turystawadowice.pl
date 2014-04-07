@@ -7,19 +7,18 @@ Template Name: Wycieczki Szkolne
 	<div id="main-content">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php echo the_content(); ?>
+			<?php $post_slug = $post->post_name; ?>
 		<?php endwhile; // end of the loop. ?>
 
-		<?php $featured_categories = array('1-dniowe', '2-dniowe');
-		      $school_trips_category = get_category_by_slug('szkolne');
+		<?php $school_trips_category = get_category_by_slug($post_slug);
+                      $featured_categories = get_categories('child_of=' . $school_trips_category->cat_ID);
 
 		      // for each of featured school trip categories
-		      foreach ( $featured_categories as $featured_category_name) {
-			  $featured_category = get_category_by_slug($featured_category_name);
+		      foreach ( $featured_categories as $featured_category) {
 			  echo '<div class="anchor-link"><a href="#' . $featured_category->cat_name . '">' . $featured_category->cat_name . '</a></div>';
 		      }
 
-		      foreach ( $featured_categories as $featured_category_name) {
-			  $featured_category = get_category_by_slug($featured_category_name);
+		      foreach ( $featured_categories as $featured_category) {
 			  echo '<h2 id="' . $featured_category->cat_name . '">' . $featured_category->cat_name . '</h2>';
                           $args = array( 'posts_per_page' => -1,
                                          'category' => $featured_category->term_id,
