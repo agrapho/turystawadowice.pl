@@ -147,6 +147,7 @@ a img {
 }
 
 .with-margin {
+	min-width: 85%;
 	max-width:1160px;
 	margin: 0 auto;
 }
@@ -422,6 +423,10 @@ dd { margin: 0; padding-bottom: 1em; padding-left: 2em; }
 	width: 230px;
 	padding-right: 3em;
 	padding-bottom: 2em;
+}
+
+.firma > .post-thumbnail-content {
+	width: 160px;
 }
 
 .post-thumbnail-content img {
