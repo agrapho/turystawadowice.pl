@@ -340,7 +340,7 @@ img.attachment-thumbnail, img.wp-post-image, img.attachment-medium, img.attachme
 }
 
 #branding #main-menu ul li a:hover {
-	color:#ff8500!important;
+	color:#ff8500;
 	text-decoration: none;
 	-webkit-background-clip: initial;
 	-webkit-text-fill-color: initial;
@@ -353,16 +353,25 @@ img.attachment-thumbnail, img.wp-post-image, img.attachment-medium, img.attachme
 	z-index: 500;
 }
 
-#branding #main-menu ul ul li a,
-#branding #main-menu ul ul ul li a {
-	font-size: 1.1em;
-	color: #ff8500;
+#branding #main-menu ul ul li {
+	left: -18px;
+	background-color: #FF8500;
+}
+
+#branding #main-menu ul ul li a {
+	left: 0px;
+	font-size: 0.9em;
+	color: #000085;
 	width: 9em;
 	height: auto;
 	text-transform: uppercase;
 	border: none;
-	background: #000075;
+	border-bottom: solid 1px;
 	-webkit-text-fill-color: initial;
+}
+
+#branding #main-menu ul ul li:last-child a {
+	border-bottom: 0px;
 }
 
 #branding #main-menu ul ul li a:hover,
@@ -391,6 +400,45 @@ img.attachment-thumbnail, img.wp-post-image, img.attachment-medium, img.attachme
 	font-size: 1.2em;
 	font-weight: bold;
 	color: #000075;
+}
+
+.trip-category-link {
+	position: relative;
+	display: inline-block;
+	width: 230px;
+	padding-right: 3em;
+	padding-bottom: 2em;
+}
+
+.trip-category-link h3 {
+	border-bottom: 3px solid #FF8500;
+	text-align: right;
+}
+
+.trip-category-icon {
+	display: inline-block;
+	position: absolute;
+	top: 20px;
+	left: 0px;
+	height: 20px;
+}
+
+.trip-category-icon-1-dniowe {
+	width: 22px;
+	background-color: #FF8500;
+}
+
+.trip-category {
+	position: relative;
+}
+
+.trip-category .trip-category-icon {
+	height: 25px;
+}
+
+.trip-category h2 {
+	text-align: right;
+	border-bottom: 3px solid #FF8500;
 }
 
 /** -- Lists -- **/

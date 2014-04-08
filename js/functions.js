@@ -43,7 +43,7 @@
      $('.background-image').animate({
        'opacity': '0'
      }, 'fast', function() {
-        $(this).css({'background-image': 'url(wp-content/themes/ilisa/images/banner-slides/img' + nextBannerId + '.png)'})
+        $(this).css({'background-image': 'url(/wp-content/themes/ilisa/images/banner-slides/img' + nextBannerId + '.png)'})
             .animate({opacity: 1}, 'fast');
      });
      window.bannerId = nextBannerId;
