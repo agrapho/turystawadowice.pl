@@ -1,18 +1,8 @@
 <?php get_header(); ?>
 
 	<?php 
- 	
-	$ep3gate=new ep3gate(
-        	'2027',   // agent number
-        	'nowy_turysta',
-    		'ep3'   // query string variable name (used to send paramaters to ibe) configurable to avoid conflict with existing parameters in your system
-        	,'utf-8'
-        	,'iconv'
-    	);
+ 	global $ep3gate;
  
-	$ep3gate->setSearchType('PA');
-	$ep3gate->fetch(array('menu','searchform','configcss','headercss','headerjs','footer','content','promobox'));
-
     	echo $ep3gate->getPart('headercss');
    	echo $ep3gate->getPart('configcss');
     	echo $ep3gate->getPart('headerjs');

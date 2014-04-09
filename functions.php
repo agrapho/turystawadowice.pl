@@ -1,5 +1,7 @@
 <?php
 
+require_once(plugin_dir_path( __FILE__ ) . 'merlinx/ep3gate.class.php');
+
 // Theme-Setup
 add_action( 'after_setup_theme', 'ilisa_theme_setup' );
 
@@ -18,6 +20,19 @@ function ilisa_theme_setup() {
         if ( function_exists( 'wp_get_theme' ) ) {
                 add_theme_support( 'custom-background', $args );
         }
+
+
+	global $ep3gate;
+ 	$ep3gate=new ep3gate(
+	        '2027',   // agent number
+	        'nowy_turysta',
+	    	'ep3'   // query string variable name (used to send paramaters to ibe) configurable to avoid conflict with existing parameters in your system
+	        ,'utf-8'
+	        ,'iconv'
+	);
+
+	$ep3gate->setSearchType('PA');
+	$ep3gate->fetch(array('menu','searchform','configcss','headercss','headerjs','footer','content','promobox'));
 }
 
 

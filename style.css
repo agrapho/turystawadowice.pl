@@ -215,6 +215,7 @@ img.attachment-thumbnail, img.wp-post-image, img.attachment-medium, img.attachme
 .ep3promobox {
 	padding-right: 3em;
 	padding-bottom: 2em;
+	margin: 0px 10px 0px 5px!important;
 }
 
 .with-shadow, .ep3boxvertical, .quicksearchtable {
@@ -461,7 +462,7 @@ dd { margin: 0; padding-bottom: 1em; padding-left: 2em; }
 
 .firma > .post-thumbnail-content {
 	width: 150px;
-	height: 100px;
+	height: 150px;
 }
 
 .firma > .post-thumbnail-content img {

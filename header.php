@@ -18,7 +18,6 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <?php wp_head(); ?>
-<?php  include(plugin_dir_path( __FILE__ ) . 'merlinx/ep3gate.class.php'); ?>
 </head>
 
 <body <?php body_class(); ?>>
