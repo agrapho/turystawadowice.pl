@@ -177,7 +177,8 @@ h3, h3 a { font-size:18px; }
 h4, h4 a { font-size:16px; }
 h5, h5 a { font-size:14px; }
 h6, h6 a { font-size:13px; }
-#main-content > h1 {
+#main-content > h1,
+#contact h1 {
 	padding: 1em 0 0.6em;
 }
 #main-content > h2,
@@ -406,7 +407,7 @@ img.attachment-thumbnail, img.wp-post-image, img.attachment-medium, img.attachme
 
 .trip-category-link {
 	display: inline-block;
-	width: 230px;
+	width: 240px;
 	margin-right: 3em;
 	margin-bottom: 2em;
 	border-bottom: 3px solid #FF8500;
@@ -414,14 +415,14 @@ img.attachment-thumbnail, img.wp-post-image, img.attachment-medium, img.attachme
 
 .trip-category-link h3 {
 	display: inline-block;
-	position: relative;
-	bottom: 5px;
-	padding-left: 0.5em;
+	float: right;
+	text-align: right;
 }
 
 .trip-category {
 	border-bottom: 3px solid #FF8500;
 	clear:both;
+	padding-top: 5em;
 }
 
 .trip-category h2 {
@@ -461,10 +462,15 @@ dd { margin: 0; padding-bottom: 1em; padding-left: 2em; }
 	height: 100px;
 }
 
+.firma > .post-thumbnail-content img {
+	height: 100px;
+}
+
 .post-thumbnail-content {
 	float: left;
 	overflow: hidden;
-	width: 230px;
+	width: 240px;
+	height: 260px;
 	padding-right: 3em;
 	padding-bottom: 2em;
 }
