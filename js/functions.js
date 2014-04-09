@@ -24,7 +24,7 @@
 
   $(".anchor-link").click(function() {
     $('html, body').animate({
-        scrollTop: $( $(this).find("a").attr('href') ).offset().top - 30
+        scrollTop: $( $(this).find("a").attr('href') ).offset().top - 40
     }, 500);
     return false;
   });

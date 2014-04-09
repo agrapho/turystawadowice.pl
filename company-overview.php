@@ -2,7 +2,7 @@
 	<div class="post-thumbnail-content">
 		<?php if ( has_post_thumbnail() ): ?>
 			<a href="<?php echo company_website(); ?>">
-                            <?php the_post_thumbnail('thumbnail', array('class' => 'with-shadow')); ?>
+                            <?php the_post_thumbnail('medium', array('class' => 'with-shadow')); ?>
                         </a>
 		<?php endif; ?>            
 	</div><!-- END .post-thumbnail-content -->

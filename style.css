@@ -177,14 +177,16 @@ h3, h3 a { font-size:18px; }
 h4, h4 a { font-size:16px; }
 h5, h5 a { font-size:14px; }
 h6, h6 a { font-size:13px; }
-#content-wrapper h1 { padding: 1em 0 0.6em; }
-#content-wrapper h2 { padding: 1em 0 0.6em; }
-#content-wrapper h3 {
+#main-content > h1 {
+	padding: 1em 0 0.6em;
+}
+#main-content > h2,
+#sidebar > h2 {
+	padding: 1em 0 0.6em;
+}
+#main-content > h3 {
 	padding: 1em 0 0.3em;
 }
-#content-wrapper h4 { padding: 1em 0 0.3em; }
-#content-wrapper h5 { padding: 1em 0 0.2em; }
-#content-wrapper h6 {padding: 0.9em 0 0.1em; }
 
 blockquote { margin: 0.7em 1.5em; padding: 1.5em 0.8em 0.2em; border-left: 0.5em solid #73b1d2;	background-color: #EEE; }
 
@@ -403,42 +405,30 @@ img.attachment-thumbnail, img.wp-post-image, img.attachment-medium, img.attachme
 }
 
 .trip-category-link {
-	position: relative;
 	display: inline-block;
 	width: 230px;
-	padding-right: 3em;
-	padding-bottom: 2em;
+	margin-right: 3em;
+	margin-bottom: 2em;
+	border-bottom: 3px solid #FF8500;
 }
 
 .trip-category-link h3 {
-	border-bottom: 3px solid #FF8500;
-	text-align: right;
-}
-
-.trip-category-icon {
 	display: inline-block;
-	position: absolute;
-	top: 20px;
-	left: 0px;
-	height: 20px;
-}
-
-.trip-category-icon-1-dniowe {
-	width: 22px;
-	background-color: #FF8500;
+	position: relative;
+	bottom: 5px;
+	padding-left: 0.5em;
 }
 
 .trip-category {
-	position: relative;
-}
-
-.trip-category .trip-category-icon {
-	height: 25px;
+	border-bottom: 3px solid #FF8500;
+	clear:both;
 }
 
 .trip-category h2 {
-	text-align: right;
-	border-bottom: 3px solid #FF8500;
+	display: inline-block;
+	position: relative;
+	bottom: 3px;
+	padding-left: 0.5em;
 }
 
 /** -- Lists -- **/
@@ -465,16 +455,18 @@ dt{ font-weight: bold; margin: 0; padding-top: 1em; }
 dd { margin: 0; padding-bottom: 1em; padding-left: 2em; }
 
 /** -- POSTS -- **/
+
+.firma > .post-thumbnail-content {
+	width: 150px;
+	height: 100px;
+}
+
 .post-thumbnail-content {
 	float: left;
 	overflow: hidden;
 	width: 230px;
 	padding-right: 3em;
 	padding-bottom: 2em;
-}
-
-.firma > .post-thumbnail-content {
-	width: 160px;
 }
 
 .post-thumbnail-content img {

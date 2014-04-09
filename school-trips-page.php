@@ -15,18 +15,22 @@ Template Name: Wycieczki Szkolne
 
     		      // for each of featured school trip categories
 		      foreach ( $featured_categories as $featured_category) {
-		          echo '<div class="trip-category-link anchor-link">
-                                    <div class="trip-category-icon trip-category-icon-' . $featured_category->cat_name . '"></div>
-                                    <h3>
+                          echo '<div class="trip-category-link anchor-link">';
+                          if (function_exists('z_taxonomy_image_url')) {
+                              echo '<img src="' . z_taxonomy_image_url($featured_category->term_id) . '"></img>';
+                          }
+                          echo     '<h3>
                                         <a href="#' . $featured_category->cat_name . '">' . $featured_category->cat_name . '</a>
                                     </h3>
                                 </div>';
 		      }
 
 		      foreach ( $featured_categories as $featured_category) {
-			  echo '<div class="trip-category">
-                                    <div class="trip-category-icon trip-category-icon-' . $featured_category->cat_name . '"></div>
-                                    <h2 id="' . $featured_category->cat_name . '">' . $featured_category->cat_name . '</h2>';
+			  echo '<div class="trip-category">';
+                          if (function_exists('z_taxonomy_image_url')) {
+                              echo '<img src="' . z_taxonomy_image_url($featured_category->term_id) . '"></img>';
+                          }
+                          echo     '<h2 id="' . $featured_category->cat_name . '">' . $featured_category->cat_name . '</h2>';
                           $args = array( 'post_type' => 'wycieczka',
                                          'posts_per_page' => -1,
                                          'category' => $featured_category->term_id,
