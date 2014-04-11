@@ -581,6 +581,36 @@ figure { margin: 0; }
 	padding: 0 2em;
 }
 
+#decision-row {
+	width: 100%;
+	clear:both;	
+	text-align: center;
+	margin-top: 40px;
+}
+
+.decision {
+	float: left;
+	width: 33%;
+	margin: 0 auto 30px;
+}
+
+.decision img {
+	width: 75%;
+}
+
+.insurance-certificate,
+.agreement {
+	float:left;
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.insurance-certificate img,
+.agreement img {
+	width: 50%;
+}
+
 /** -- CSS3 MEDIA QUERIES FOR RESPONSIVE DESIGN -- **/
 
 
