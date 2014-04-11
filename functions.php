@@ -125,6 +125,11 @@ function trip_boarding() {
 	return $boarding;
 }
 
+function trip_attractions() {
+	$attractions = get_post_meta(get_the_ID(),'wpcf-trip-attractions',TRUE);
+	return $attractions;
+}
+
 function company_website() {
 	$website = get_post_meta(get_the_ID(),'wpcf-company-website',TRUE);
 	return $website;

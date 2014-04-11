@@ -9,11 +9,18 @@
 			<?php echo do_shortcode('[slideshow post_id="' . get_the_ID() . '"]'); ?>
 		</div>
 		<div class="trip-overview">
-			<?php echo "<p><strong>Data wycieczki: </strong>" . trip_date() . "</p>";
+			<?php $trip_date = trip_date();
+			      if ($trip_date) {
+				  echo "<p><strong>Data wycieczki: </strong>" . $trip_date . "</p>";
+			      }
 			      echo "<p><strong>Cena: </strong>" . trip_price() . "</p>";
 			      $trip_boarding = trip_boarding();
 			      if ($trip_boarding) {
 				  echo "<p><strong>Wyżywienie: </strong>" . $trip_boarding . "</p>";
+			      }
+			      $trip_attractions = trip_attractions();
+			      if ($trip_attractions) {
+				  echo "<p><strong>Atrakcje: </strong>" . $trip_attractions . "</p>";
 			      }
 			?>
 		</div>
