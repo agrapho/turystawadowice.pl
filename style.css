@@ -56,6 +56,11 @@ body {
 	background: #fff;
 }
 
+hr {
+	width: 100%;
+	margin: 1.5em 0;
+}
+
 ol, ul {
 	list-style: none;
 }
@@ -558,6 +563,21 @@ figure { margin: 0; }
 	text-align: justify;
 }
 
+.insurance-card-bar {
+	float: left;
+	width: 50%;
+}
+
+.insurance-card-bar-inner {
+	width: 250px;
+	margin: 0 auto;
+	clear: both;
+	padding-bottom: 1.5em;
+}
+
+.insurance-card-bar > p {
+	padding: 0 2em;
+}
 
 /** -- CSS3 MEDIA QUERIES FOR RESPONSIVE DESIGN -- **/
 
