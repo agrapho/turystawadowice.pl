@@ -1,8 +1,10 @@
 <div id="post-thumbnail-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="post-thumbnail-content">
-		<h2>
+                <div class="post-thumbnail-header">
+		    <h2>
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a>
-		</h2>
+		    </h2>
+                </div>
 		<?php if ( has_post_thumbnail() ): ?>
 			<a href="<?php the_permalink(); ?>">
                             <?php the_post_thumbnail('thumbnail', array('class' => 'with-shadow')); ?>
