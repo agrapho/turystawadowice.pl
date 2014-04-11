@@ -256,6 +256,7 @@ img.attachment-thumbnail, img.wp-post-image, img.attachment-medium, img.attachme
 	position: relative;
 	top: -7px;
 	text-shadow: 1px 1px #0c2a57;
+	z-index: -1;
 }
 
 .post-thumbnail-text {
@@ -483,7 +484,7 @@ dd { margin: 0; padding-bottom: 1em; padding-left: 2em; }
 }
 
 #featured-trips .post-thumbnail-content {
-	padding-bottom: 2em;
+	padding-bottom: 4em;
 }
 
 .post-thumbnail-content img {

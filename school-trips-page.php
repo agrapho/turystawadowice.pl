@@ -13,17 +13,19 @@ Template Name: Wycieczki Szkolne
 		<?php $school_trips_category = get_category_by_slug($post_slug);
                       $featured_categories = get_categories('child_of=' . $school_trips_category->cat_ID);
 
-    		      // for each of featured school trip categories
-		      foreach ( $featured_categories as $featured_category) {
-                          echo '<div class="trip-category-link anchor-link">';
-                          if (function_exists('z_taxonomy_image_url')) {
-                              echo '<img src="' . z_taxonomy_image_url($featured_category->term_id) . '"></img>';
-                          }
-                          echo     '<h3>
-                                        <a href="#' . $featured_category->cat_name . '">' . $featured_category->cat_name . '</a>
-                                    </h3>
-                                </div>';
-		      }
+                      if (count($featured_categories) > 1) {
+      		          // for each of featured school trip categories
+		          foreach ( $featured_categories as $featured_category) {
+                              echo '<div class="trip-category-link anchor-link">';
+                              if (function_exists('z_taxonomy_image_url')) {
+                                  echo '<img src="' . z_taxonomy_image_url($featured_category->term_id) . '"></img>';
+                              }
+                              echo     '<h3>
+                                            <a href="#' . $featured_category->cat_name . '">' . $featured_category->cat_name . '</a>
+                                        </h3>
+                                    </div>';
+		          }
+                      }
 
 		      foreach ( $featured_categories as $featured_category) {
 			  echo '<div class="trip-category">';

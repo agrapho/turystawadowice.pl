@@ -5,6 +5,10 @@
   $(document).ready(function() {
     var size = $('.quicksearchtable').height();
     $('#contact-map iframe').height(size).width(size);
+    var trip_thumbnail = $('#featured-trips .post-thumbnail-content img:first-child');
+    if (trip_thumbnail) {
+//      $('#sidebar').css("margin-top", trip_thumbnail.position().top);
+    }
   });
 
   $(window).scroll(function() {
