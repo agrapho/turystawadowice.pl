@@ -304,6 +304,28 @@ img.attachment-thumbnail, img.wp-post-image, img.attachment-medium, img.attachme
 
 #contact-information h3 { padding: 0 0 0.6em; }
 
+#contact-form {
+	padding-top: 50px;
+	width: 100%;
+	clear: both;
+}
+
+#contact-form h2 {
+	margin-bottom: 1em;
+}
+
+#contact-form .wpcf7-submit {
+	float: right;
+}
+
+.contact-form-left {
+	float: left;
+}
+
+.contact-form-right {
+	float: right;
+}
+
 /** -- Navigations -- **/
 
 #branding img {
