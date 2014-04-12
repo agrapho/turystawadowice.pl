@@ -44,8 +44,8 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	margin: 0;
 	outline: 0;
 	padding: 0;
-	vertical-align: baseline;
 }
+
 html {
 	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
 	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
@@ -66,7 +66,6 @@ ol, ul {
 }
 table { /* tables still need 'cellspacing="0"' in the markup */
 	border-collapse: separate;
-	border-spacing: 0;
 }
 caption, th, td {
 	font-weight: normal;
@@ -229,8 +228,37 @@ img.attachment-thumbnail, img.wp-post-image, img.attachment-medium, img.attachme
 	box-shadow: 5px 5px 5px #888;
 }
 
-.quicksearchtable > tbody > tr:first-child {
+.quicksearchtable > tbody > tr:first-child,
+.betweentablecontainer {
 	display: none;
+}
+
+.quicksearchtable .color0bg,
+#ep3-content table thead .color0bg,
+#ep3-content table thead .color2bg,
+#ep3-content table thead .color3bg {
+	background-color: #000085;
+}
+
+#ep3-content table thead,
+#ep3-content table thead .color1,
+#ep3-content table thead .color6,
+#ep3-content table thead .color7,
+#ep3-content table thead .color9,
+#ep3-content table thead .color10,
+#ep3-content table thead .color12,
+.quicksearchtable .color6,
+.quicksearchtable .color12 {
+	color: #FFFFFF;
+}
+
+#ep3-content .color2bot {
+	border-top-color: #000085;
+}
+
+.quicksearchtable #scroll_panel .color6,
+.quicksearchtable .ep3_searchformmore .color12 {
+	color: #000085;
 }
 
 #partnership-programme {
@@ -238,7 +266,7 @@ img.attachment-thumbnail, img.wp-post-image, img.attachment-medium, img.attachme
 }
 
 .post-thumbnail-header {
-	height: 6em;
+	height: 4em;
 	position: relative;
 }
 
