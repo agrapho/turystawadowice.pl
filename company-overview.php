@@ -5,7 +5,7 @@
                                        if ($website && ($website != "")) {
                                            echo company_website();
                                        } else {
-                                           echo site_url('/kontakt');
+                                           echo site_url('/kontakt/#formularz');
                                        } ?>">
                             <?php the_post_thumbnail('medium', array('class' => 'with-shadow')); ?>
                         </a>
