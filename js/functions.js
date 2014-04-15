@@ -21,12 +21,13 @@
     var scrollTop = $(this).scrollTop();
     var thresholdScrollTop = mainFramePos - mainMenuHeight;
     if (scrollTop > thresholdScrollTop) {
-	mainMenu.addClass('fixed-main-menu');
-	mainFrame.css("top", mainMenuHeight);
+	if (! mainMenu.hasClass('fixed-main-menu')) {
+  	    mainMenu.addClass('fixed-main-menu');
+	    mainFrame.css("top", mainMenuHeight);
+	}
 	// move background
 	var backgroundPosition = (scrollTop - thresholdScrollTop) / mainFrameHeight * 100;
-console.log("ST: " + scrollTop + ", TST: " + thresholdScrollTop + ", MFH: " + mainFrameHeight);
-	$(background).css("background-position-y", backgroundPosition + "%");
+	//$(background).css("background-position-y", backgroundPosition + "%");
     } else {
 	mainMenu.removeClass('fixed-main-menu');
 	mainFrame.css("top", "0");

@@ -251,6 +251,11 @@ img.attachment-thumbnail, img.wp-post-image, img.attachment-medium, img.attachme
 	color: #000085;
 }
 
+#promoboxes img {
+	width: 228px;
+	height: 152px;
+}
+
 #partnership-programme {
 	padding-top: 2em;
 }
