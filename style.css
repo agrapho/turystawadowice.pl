@@ -116,7 +116,7 @@ a img {
 }
 
 #background {
-	background-image: url("/wp-content/uploads/2014/04/background.jpg");
+	background-image: url("images/background.jpg");
 	background-size: 100%;
 	background-repeat: no-repeat;
 }
@@ -513,6 +513,25 @@ dd { margin: 0; padding-bottom: 1em; padding-left: 2em; }
 
 .firma > .post-thumbnail-content img {
 	height: 100px;
+}
+
+.autokar > .post-thumbnail-content {
+	clear: both;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	width: 100%;
+}
+
+.autokar > .post-thumbnail-content img {
+	width: 300px;
+	height: 150px;
+	float: left;
+}
+
+.autokar .bus-description {
+	position: relative;
+	left: 2em;
+	line-height: 1.5em;
 }
 
 .post-thumbnail-content {

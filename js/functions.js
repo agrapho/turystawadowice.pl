@@ -25,7 +25,7 @@
 	mainFrame.css("top", mainMenuHeight);
 	// move background
 	var backgroundPosition = (scrollTop - thresholdScrollTop) / mainFrameHeight * 100;
-console.log("BP: " + backgroundPosition);
+console.log("ST: " + scrollTop + ", TST: " + thresholdScrollTop + ", MFH: " + mainFrameHeight);
 	$(background).css("background-position-y", backgroundPosition + "%");
     } else {
 	mainMenu.removeClass('fixed-main-menu');
