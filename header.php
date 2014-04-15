@@ -49,8 +49,7 @@
                 </div>
             </nav><!-- #main-menu -->
 	</header><!-- #branding -->
+
 	<div id="background">
-	    <img src="http://photos.wikimapia.org/p/ot2/00/00/02/76/55_big.jpg"></img>
-	</div>
-	<div id="main-frame" class="with-margin">
+	  <div id="main-frame" class="with-margin">
 	    <div id="content-wrapper">

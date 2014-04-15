@@ -14,15 +14,23 @@
   $(window).scroll(function() {
     var mainMenu = $('#main-menu');
     var mainFrame = $('#main-frame');
+    var background = $('#background');
     var mainMenuHeight = $(mainMenu).height();
     var mainFramePos = $(mainFrame).position().top;
+    var mainFrameHeight = $(mainFrame).height();
     var scrollTop = $(this).scrollTop();
-    if (scrollTop > mainFramePos - mainMenuHeight) {
+    var thresholdScrollTop = mainFramePos - mainMenuHeight;
+    if (scrollTop > thresholdScrollTop) {
 	mainMenu.addClass('fixed-main-menu');
 	mainFrame.css("top", mainMenuHeight);
+	// move background
+	var backgroundPosition = (scrollTop - thresholdScrollTop) / mainFrameHeight * 100;
+console.log("BP: " + backgroundPosition);
+	$(background).css("background-position-y", backgroundPosition + "%");
     } else {
 	mainMenu.removeClass('fixed-main-menu');
 	mainFrame.css("top", "0");
+	$(background).css("background-position-y", 0);
     }
   }).scroll();
 
