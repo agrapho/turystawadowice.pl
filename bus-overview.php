@@ -15,7 +15,7 @@
                           $attachments = get_posts($args);
                           if ($attachments) {
                               foreach ($attachments as $attachment) {
-                                  the_attachment_link($attachment->ID, false);
+                                  echo '<a href="' . wp_get_attachment_url($attachment->ID) . '">Zobacz pełną specyfikację</a>';
                               }
                           } ?>
 		</div>
