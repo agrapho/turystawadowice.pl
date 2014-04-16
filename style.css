@@ -539,6 +539,16 @@ dd { margin: 0; padding-bottom: 1em; padding-left: 2em; }
 	line-height: 1.5em;
 }
 
+.tlumaczenie .post-thumbnail-content {
+        width: 100px;
+	margin-bottom: 2em;
+}
+
+.tlumaczenie .post-thumbnail-content img {
+	width: 100px;
+	height: 60px;
+}
+
 .post-thumbnail-content {
 	float: left;
 	overflow: hidden;
