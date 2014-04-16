@@ -3,35 +3,26 @@
   window.bannerId = 1;
 
   $(document).ready(function() {
+    window.mainMenu = $('#main-menu');
+    window.mainFrame = $('#main-frame');
+    window.mainMenuHeight = $(mainMenu).height();
+    window.mainFramePos = $(mainFrame).position().top;
+
     var size = $('.quicksearchtable').height();
     $('#contact-map iframe').height(size).width(size);
-    var trip_thumbnail = $('#featured-trips .post-thumbnail-content img:first-child');
-    if (trip_thumbnail) {
-//      $('#sidebar').css("margin-top", trip_thumbnail.position().top);
-    }
   });
 
   $(window).scroll(function() {
-    var mainMenu = $('#main-menu');
-    var mainFrame = $('#main-frame');
-    var background = $('#background');
-    var mainMenuHeight = $(mainMenu).height();
-    var mainFramePos = $(mainFrame).position().top;
-    var mainFrameHeight = $(mainFrame).height();
     var scrollTop = $(this).scrollTop();
-    var thresholdScrollTop = mainFramePos - mainMenuHeight;
+    var thresholdScrollTop = window.mainFramePos - window.mainMenuHeight;
     if (scrollTop > thresholdScrollTop) {
-	if (! mainMenu.hasClass('fixed-main-menu')) {
-  	    mainMenu.addClass('fixed-main-menu');
-	    mainFrame.css("top", mainMenuHeight);
+	if (! window.mainMenu.hasClass('fixed-main-menu')) {
+  	    window.mainMenu.addClass('fixed-main-menu');
+	    window.mainFrame.css("top", window.mainMenuHeight);
 	}
-	// move background
-	var backgroundPosition = (scrollTop - thresholdScrollTop) / mainFrameHeight * 100;
-	//$(background).css("background-position-y", backgroundPosition + "%");
     } else {
-	mainMenu.removeClass('fixed-main-menu');
-	mainFrame.css("top", "0");
-	$(background).css("background-position-y", 0);
+	window.mainMenu.removeClass('fixed-main-menu');
+	window.mainFrame.css("top", "0");
     }
   }).scroll();
 
