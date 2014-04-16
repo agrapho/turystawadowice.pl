@@ -5,8 +5,12 @@
   $(document).ready(function() {
     window.mainMenu = $('#main-menu');
     window.mainFrame = $('#main-frame');
-    window.mainMenuHeight = $(mainMenu).height();
-    window.mainFramePos = $(mainFrame).position().top;
+    window.mainMenuHeight = window.mainMenu.height();
+    window.mainFrameHeight = window.mainFrame.height();
+    window.mainFramePos = window.mainFrame.position().top;
+    window.background = $('#background img');
+    window.backgroundHeight = window.background.height();
+    window.mainMenuFixed = false;
 
     var size = $('.quicksearchtable').height();
     $('#contact-map iframe').height(size).width(size);
@@ -16,13 +20,22 @@
     var scrollTop = $(this).scrollTop();
     var thresholdScrollTop = window.mainFramePos - window.mainMenuHeight;
     if (scrollTop > thresholdScrollTop) {
-	if (! window.mainMenu.hasClass('fixed-main-menu')) {
+	if (! window.mainMenuFixed) {
+            window.mainMenuFixed = true;
   	    window.mainMenu.addClass('fixed-main-menu');
 	    window.mainFrame.css("top", window.mainMenuHeight);
 	}
+        if (scrollTop - thresholdScrollTop > window.backgroundHeight - $(window).height() + 5) {
+	    window.background.addClass('fixed-bottom');
+        } else {
+            window.background.removeClass('fixed-bottom');
+        } 
     } else {
-	window.mainMenu.removeClass('fixed-main-menu');
-	window.mainFrame.css("top", "0");
+        if (window.mainMenuFixed) {
+          window.mainMenuFixed = false;
+  	  window.mainMenu.removeClass('fixed-main-menu');
+	  window.mainFrame.css("top", "0");
+	}
     }
   }).scroll();
 

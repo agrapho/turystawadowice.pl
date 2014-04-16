@@ -51,5 +51,7 @@
 	</header><!-- #branding -->
 
 	<div id="background">
-	  <div id="main-frame" class="with-margin">
-	    <div id="content-wrapper">
+            <img src="<?php echo get_stylesheet_directory_uri()."/images/background.jpg"; ?>" alt=""></img>
+        </div>
+	<div id="main-frame" class="with-margin">
+	  <div id="content-wrapper">
