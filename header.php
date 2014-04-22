@@ -51,7 +51,11 @@
 	</header><!-- #branding -->
 
 	<div id="background">
-            <img src="<?php echo get_stylesheet_directory_uri()."/images/background.jpg"; ?>" alt=""></img>
+            <img src="<?php if (is_front_page()) {
+                                echo get_stylesheet_directory_uri()."/images/background.jpg";
+                            } else {
+                                echo get_stylesheet_directory_uri()."/images/background-light.jpg";
+                            }?>" alt=""></img>
         </div>
 	<div id="main-frame" class="with-margin">
 	  <div id="content-wrapper">
