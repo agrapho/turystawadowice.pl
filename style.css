@@ -343,7 +343,10 @@ img.attachment-thumbnail, img.wp-post-image, img.attachment-medium, img.attachme
 }
 
 #formularz .wpcf7-submit {
-	float: right;
+	float: left;
+	background-color: #FF8500;
+	color: #000085;
+	padding: 5px;
 }
 
 .contact-form-left {
@@ -352,6 +355,7 @@ img.attachment-thumbnail, img.wp-post-image, img.attachment-medium, img.attachme
 
 .contact-form-right {
 	float: right;
+	width: 40%;
 }
 
 /** -- Navigations -- **/
