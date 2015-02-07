@@ -694,6 +694,16 @@ figure { margin: 0; }
 	width: 50%;
 }
 
+#close_cross {
+	right: 7px!important;
+	top: 7px!important;
+}
+
+#itro_popup {
+	left: 0px!important;
+	right: 0px!important;
+}
+
 /** -- CSS3 MEDIA QUERIES FOR RESPONSIVE DESIGN -- **/
 
 
