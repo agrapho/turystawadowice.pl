@@ -111,12 +111,14 @@ function trip_price() {
 
 function display_trip_price($pretty) {
 	$price = trip_price();
-	if ($pretty) {
-	 	$price_big_case = substr($price, 0, 1);
-        	$price_normal_case = substr($price, 1);
-	        echo "<big>$price_big_case</big>$price_normal_case";
-	} else {
-		echo "$price";
+	if ($price != "-") {
+		if ($pretty) {
+		 	$price_big_case = substr($price, 0, 1);
+        		$price_normal_case = substr($price, 1);
+	       	 	echo "<big>$price_big_case</big>$price_normal_case";
+		} else {
+			echo "$price";
+		};
 	};
 }
 

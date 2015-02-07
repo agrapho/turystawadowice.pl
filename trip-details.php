@@ -13,7 +13,9 @@
 			      if ($trip_date) {
 				  echo "<p><strong>Data wycieczki: </strong>" . $trip_date . "</p>";
 			      }
-			      echo "<p><strong>Cena: </strong>" . trip_price() . "</p>";
+			      if (trip_price() != "-") {
+				      echo "<p><strong>Cena: </strong>" . trip_price() . "</p>";
+			      }
 			      $trip_boarding = trip_boarding();
 			      if ($trip_boarding) {
 				  echo "<p><strong>Wyżywienie: </strong>" . $trip_boarding . "</p>";
