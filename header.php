@@ -48,6 +48,9 @@
 		    <?php wp_nav_menu( array( 'theme_location' => 'main-menu') ); ?>
                 </div>
             </nav><!-- #main-menu -->
+            <div id="facebook-link">
+                <a href="https://www.facebook.com/pages/Turysta-Wadowice/957693874262966"><img src="<?php echo get_stylesheet_directory_uri()."/images/facebook-logo.png"; ?>" alt="" /></a>
+            </div>
 	</header><!-- #branding -->
 
 	<div id="background">

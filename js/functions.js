@@ -5,6 +5,7 @@
   $(document).ready(function() {
     window.mainMenu = $('#main-menu');
     window.mainFrame = $('#main-frame');
+    window.facebookLink = $('#facebook-link');
     window.mainMenuHeight = window.mainMenu.height();
     window.mainFrameHeight = window.mainFrame.height();
     window.mainFramePos = window.mainFrame.position().top;
@@ -24,6 +25,7 @@
             window.mainMenuFixed = true;
   	    window.mainMenu.addClass('fixed-main-menu');
 	    window.mainFrame.css("top", window.mainMenuHeight);
+            window.facebookLink.addClass('fixed-facebook-link');
 	}
         if (scrollTop - thresholdScrollTop > window.backgroundHeight - $(window).height() + 5) {
 	    window.background.addClass('fixed-bottom');
@@ -34,6 +36,7 @@
         if (window.mainMenuFixed) {
           window.mainMenuFixed = false;
   	  window.mainMenu.removeClass('fixed-main-menu');
+          window.facebookLink.removeClass('fixed-facebook-link');
 	  window.mainFrame.css("top", "0");
 	}
     }
