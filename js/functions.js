@@ -49,6 +49,9 @@
     return false;
   });
 
+  $("#itro_popup").click(function() {
+      $(this).fadeOut(function(){itro_opaco.style.visibility='hidden';});
+  });
 
   setInterval(changeBanner, 4000);
   function changeBanner() {

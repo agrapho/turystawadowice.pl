@@ -722,6 +722,7 @@ figure { margin: 0; }
 #itro_popup {
 	left: 0px!important;
 	right: 0px!important;
+	cursor: pointer;
 }
 
 /** -- CSS3 MEDIA QUERIES FOR RESPONSIVE DESIGN -- **/
