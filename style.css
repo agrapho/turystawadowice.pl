@@ -489,6 +489,25 @@ img.attachment-thumbnail, img.wp-post-image, img.attachment-medium, img.attachme
 	margin: 0px;
 }
 
+#sidebar-offer {
+	position: relative;
+	width: 193px;
+	height: 193px;
+	margin-top: 33px;
+}
+
+#sidebar-offer .bg {
+	position: absolute;
+	z-index: 1;
+}
+
+#sidebar-offer .fg {
+	position: absolute;
+	z-index: 2;
+	width: 0px;
+	height: 193px;
+}
+
 .trip-category-link {
 	display: inline-block;
 	width: 240px;

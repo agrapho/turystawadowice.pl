@@ -10,6 +10,11 @@
 	        print $ep3gate->getPart('footer');
 	    ?>
 
+	    <div id="sidebar-offer" class="with-shadow">
+		<img class="bg" src="<?php echo get_stylesheet_directory_uri()."/images/offer-bg.png"; ?>" alt="" />
+		<img class="fg" src="<?php echo get_stylesheet_directory_uri()."/images/offer-fg.png"; ?>" alt="" />
+            </div>
+
 	    <div id="partnership-programme">
 		<object width="195" height="195" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0">
   			<param name="movie" value="http://www.katowice-airport.com/lzk/img/baner/button.swf">

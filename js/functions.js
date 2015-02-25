@@ -1,6 +1,7 @@
 +function($) {
 
   window.bannerId = 1;
+  window.offerTextVisible = false;
 
   $(document).ready(function() {
     window.mainMenu = $('#main-menu');
@@ -53,7 +54,7 @@
       $(this).fadeOut(function(){itro_opaco.style.visibility='hidden';});
   });
 
-  setInterval(changeBanner, 4000);
+  setInterval(changeBanner, 3000);
   function changeBanner() {
      bannerId = window.bannerId;
    
@@ -70,6 +71,18 @@
             .animate({opacity: 1}, 'fast');
      });
      window.bannerId = nextBannerId;
+
+     // sidebar offer changes
+     if (! window.offerTextVisible) {
+        $('#sidebar-offer .fg').animate({"width": "193px"}, "slow");
+        window.offerTextVisible = true;
+     } else {
+        $('#sidebar-offer .fg').fadeTo("slow", 0.0, function() {
+           $('#sidebar-offer .fg').css("width", "0px");
+           $('#sidebar-offer .fg').css("opacity", "1.0");
+           window.offerTextVisible = false;
+        });
+     }
   };
 
 }(jQuery);
