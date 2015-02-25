@@ -54,7 +54,7 @@
       $(this).fadeOut(function(){itro_opaco.style.visibility='hidden';});
   });
 
-  setInterval(changeBanner, 3000);
+  setInterval(changeBanner, 4000);
   function changeBanner() {
      bannerId = window.bannerId;
    
@@ -71,18 +71,14 @@
             .animate({opacity: 1}, 'fast');
      });
      window.bannerId = nextBannerId;
+  };
 
-     // sidebar offer changes
-     if (! window.offerTextVisible) {
-        $('#sidebar-offer .fg').animate({"width": "193px"}, "slow");
-        window.offerTextVisible = true;
-     } else {
-        $('#sidebar-offer .fg').fadeTo("slow", 0.0, function() {
+  setInterval(changeOfferText, 5000);
+  function changeOfferText() {
+     $('#sidebar-offer .fg').animate({"width": "193px"}, "slow").delay(3000).fadeTo("slow", 0.0, function() {
            $('#sidebar-offer .fg').css("width", "0px");
            $('#sidebar-offer .fg').css("opacity", "1.0");
-           window.offerTextVisible = false;
-        });
-     }
+     });
   };
 
 }(jQuery);
