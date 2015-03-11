@@ -17,7 +17,7 @@
                 </div>
             </a>
 
-	    <a href="/">
+	    <a href="/inne/bony">
                 <div id="sidebar-voucher" class="with-shadow">
 		    <img src="<?php echo get_stylesheet_directory_uri()."/images/voucher.png"; ?>" alt="" />
                 </div>

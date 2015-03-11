@@ -605,6 +605,16 @@ dd { margin: 0; padding-bottom: 1em; padding-left: 2em; }
 	height: 60px;
 }
 
+.bon > .post-thumbnail-content {
+	margin-top: 2em;
+}
+
+.bon > .post-thumbnail-content img {
+	width: 300px;
+	height: 120px;
+	float: left;
+}
+
 .post-thumbnail-content {
 	float: left;
 	overflow: hidden;
