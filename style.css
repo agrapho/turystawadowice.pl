@@ -508,6 +508,13 @@ img.attachment-thumbnail, img.wp-post-image, img.attachment-medium, img.attachme
 	height: 193px;
 }
 
+#sidebar-voucher {
+	position: relative;
+	width: 193px;
+	height: 193px;
+	margin-top: 33px;
+}
+
 .trip-category-link {
 	display: inline-block;
 	width: 240px;

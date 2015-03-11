@@ -17,6 +17,12 @@
                 </div>
             </a>
 
+	    <a href="/">
+                <div id="sidebar-voucher" class="with-shadow">
+		    <img src="<?php echo get_stylesheet_directory_uri()."/images/voucher.png"; ?>" alt="" />
+                </div>
+            </a>
+
 	    <div id="partnership-programme">
 		<object width="195" height="195" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0">
   			<param name="movie" value="http://www.katowice-airport.com/lzk/img/baner/button.swf">
