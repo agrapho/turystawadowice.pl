@@ -43,6 +43,11 @@
 		</div>
 	      </hgroup>
             </div>
+            <nav id="main-menu-offer" class="clearfix">
+                <div class="with-margin">
+		    <a href="/wycieczka/wadowice">Zapraszamy do Wadowic!</a>
+                </div>
+            </nav><!-- #main-menu-offer -->
 	    <nav id="main-menu" class="clearfix">
                 <div class="with-margin">
 		    <?php wp_nav_menu( array( 'theme_location' => 'main-menu') ); ?>

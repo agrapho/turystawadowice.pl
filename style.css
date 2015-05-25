@@ -366,15 +366,37 @@ img.attachment-thumbnail, img.wp-post-image, img.attachment-medium, img.attachme
 	z-index: 9999;
 }
 
-#branding #main-menu {
+#branding #main-menu,
+#branding #main-menu-offer {
 	display: block;
 	clear:both;
 	word-wrap: break-word;
-	background: #ff8500;
 	width:100%;
 }
 
+#branding #main-menu {
+	background: #ff8500;
+}
+
+#branding #main-menu-offer {
+	padding: 4px;
+	background: #cedcdc;
+}
+
+#branding #main-menu-offer a {
+	text-decoration: none;
+	color: #000075;
+	font-weight: bold;
+	font-style: italic;
+}
+
 .fixed-main-menu {
+	position: fixed;
+	top: 24px;
+	z-index: 9999;
+}
+
+.fixed-main-menu-offer {
 	position: fixed;
 	top: 0px;
 	z-index: 9999;
@@ -382,7 +404,7 @@ img.attachment-thumbnail, img.wp-post-image, img.attachment-medium, img.attachme
 
 .fixed-facebook-link {
 	position: fixed!important;
-	top: 33px;
+	top: 57px;
 	z-index: 9999;
 }
 
@@ -783,7 +805,8 @@ figure { margin: 0; }
 
 @media screen and (max-width : 480px) {
 #branding {	border:none;}
-#branding #main-menu {
+#branding #main-menu,
+#branding #main-menu-offer {
 	float:none;
 	margin:0;
 	padding:0;

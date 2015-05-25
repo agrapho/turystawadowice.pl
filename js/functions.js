@@ -5,9 +5,11 @@
 
   $(document).ready(function() {
     window.mainMenu = $('#main-menu');
+    window.mainMenuOffer = $('#main-menu-offer');
     window.mainFrame = $('#main-frame');
     window.facebookLink = $('#facebook-link');
     window.mainMenuHeight = window.mainMenu.height();
+    window.mainMenuOfferHeight = window.mainMenuOffer.height();
     window.mainFrameHeight = window.mainFrame.height();
     window.mainFramePos = window.mainFrame.position().top;
     window.background = $('#background img');
@@ -20,11 +22,12 @@
 
   $(window).scroll(function() {
     var scrollTop = $(this).scrollTop();
-    var thresholdScrollTop = window.mainFramePos - window.mainMenuHeight;
+    var thresholdScrollTop = window.mainFramePos - window.mainMenuHeight - window.mainMenuOfferHeight;
     if (scrollTop > thresholdScrollTop) {
 	if (! window.mainMenuFixed) {
             window.mainMenuFixed = true;
   	    window.mainMenu.addClass('fixed-main-menu');
+  	    window.mainMenuOffer.addClass('fixed-main-menu-offer');
 	    window.mainFrame.css("top", window.mainMenuHeight);
             window.facebookLink.addClass('fixed-facebook-link');
 	}
@@ -37,6 +40,7 @@
         if (window.mainMenuFixed) {
           window.mainMenuFixed = false;
   	  window.mainMenu.removeClass('fixed-main-menu');
+  	  window.mainMenuOffer.removeClass('fixed-main-menu-offer');
           window.facebookLink.removeClass('fixed-facebook-link');
 	  window.mainFrame.css("top", "0");
 	}
